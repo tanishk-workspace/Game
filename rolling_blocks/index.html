@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bloxorz 3D — Three.js Edition</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="stat-box">
+      <span class="label">LEVEL</span>
+      <span id="level-display" class="value">1 / 5</span>
+    </div>
+    <div class="stat-box">
+      <span class="label">MOVES</span>
+      <span id="moves-display" class="value">0</span>
+    </div>
+  </div>
+
+  <div id="controls-hint">
+    <strong>Arrow Keys / WASD</strong>: Roll Block &nbsp;|&nbsp;
+    <strong>R</strong>: Restart &nbsp;|&nbsp;
+    <strong>Mouse Drag</strong>: Orbit Camera
+  </div>
+  <div id="mobile-controls">
+  <button id="btn-restart" class="control-btn restart-btn" aria-label="Restart">↻</button>
+  <div class="dpad">
+    <button class="control-btn up" data-dr="-1" data-dc="0" aria-label="Move Up">▲</button>
+    <button class="control-btn left" data-dr="0" data-dc="-1" aria-label="Move Left">◀</button>
+    <button class="control-btn down" data-dr="1" data-dc="0" aria-label="Move Down">▼</button>
+    <button class="control-btn right" data-dr="0" data-dc="1" aria-label="Move Right">▶</button>
+  </div>
+</div>
+
+  <div id="modal-overlay" class="hidden">
+    <div class="modal-card">
+      <h2 id="modal-title">STAGE CLEAR!</h2>
+      <p id="modal-subtitle">Press ENTER or click below to continue.</p>
+      <button id="modal-btn">Next Level</button>
+    </div>
+  </div>
+
+  <canvas id="game-canvas"></canvas>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
